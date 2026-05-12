@@ -48,4 +48,3 @@ export default function ProfilePage() {
     </Container>
   );
 }
-export default ProfilePage;
