@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import path from "path";
+import userRouter from "./routes/userRouter.js";
 import { fileURLToPath } from "url";
 import morgan from "morgan";
 import connectDB from "./db/dbConnect.js";
@@ -26,7 +27,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-
+app.use("/api/user", userRouter);
 connectDB();
 
 app.use("/api/auth", authRouter);

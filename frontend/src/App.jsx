@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import LoginPage from './Pages/LoginPage/LoginPage'
 import ProfilePage from './Pages/Profile/ProfilePage'
+import Urlshortner from './Pages/URLShortener/ShortUrl'
+import URLHistory from './Pages/URLShortener/URLHistory'
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute'
 import { HeaderMegaMenu } from './Components/Navbar/HeaderMegaMenu'
-import ShortUrl from './Pages/URLShortener/ShortUrl'
-import URLHistory from './Pages/URLShortener/URLHistory'
 import './index.css'
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
 
         <Route element={<PrivateRoute />}>
           <Route path='/profile' element={<ProfilePage />} />
-          <Route path='/shorten-url' element={<ShortUrl />} />
+          <Route path='/url-shortener' element={<Urlshortner />} />
           <Route path='/url-history' element={<URLHistory />} />
         </Route>
       </Routes>
